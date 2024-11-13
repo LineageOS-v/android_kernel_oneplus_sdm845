@@ -223,7 +223,7 @@ static int __init loglevel(char *str)
 	 * are quite hard to debug
 	 */
 	if (get_option(&str, &newlevel)) {
-		console_loglevel = newlevel;
+		console_loglevel = CONSOLE_LOGLEVEL_DEBUG; // linux内核日志级别loglevel改为 CONSOLE_LOGLEVEL_DEBUG==7
 		return 0;
 	}
 
